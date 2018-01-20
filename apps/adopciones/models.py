@@ -9,3 +9,6 @@ class Personas(models.Model):
     email = models.EmailField()
     domicilio = models.TextField()
 
+    def __str__(self):
+        return '{}'.format(self.nombre, self.apellidos)
+
