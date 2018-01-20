@@ -13,4 +13,4 @@ class Mascotas(models.Model):
     edad_aproximada = models.IntegerField()
     fecha_rescate = models.DateField()
     persona = models.ForeignKey(Personas, null=True, blank=True, on_delete=models.CASCADE)
-    vacuna = models.ManyToManyField(Vacunas)
+    vacuna = models.ManyToManyField(Vacunas,blank=True)
