@@ -11,6 +11,7 @@
       <th scope="col">edad</th>
       <th scope="col">fecha</th>
       <th scope="col">Dueño</th>
+      <th scope="col">acciones</th>
     </tr>
   </thead>
   <tbody>
@@ -24,6 +25,10 @@
               <td>{{ mascota.edad_aproximada}}</td>
               <td>{{ mascota.fecha_rescate}}</td>
               <td>{{ mascota.persona.nombre}} {{ mascota.persona.apellidos}}</td>
+              <td>
+                  <a href="{% url 'mascotas:mascota_editar' mascota.id %}" class="btn btn-primary">editar</a>
+                  <a href="{% url 'mascotas:mascota_eliminar' mascota.id %}" class="btn btn-primary">eliminar</a>
+              </td>
             </tr>
         {% endfor%}
     {% else %}
