@@ -1,5 +1,5 @@
-from django.urls import path
+from django.conf.urls import url, include
 from apps.mascotas.views import index
 urlpatterns = [
-    path('', index),
+    url(r'^index/', index),
 ]
