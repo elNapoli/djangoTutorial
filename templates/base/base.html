@@ -1,0 +1,19 @@
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %} Document {% endblock %}</title>
+    </head>
+    <body>
+        {% block header %}
+            {% include 'base/header.html'%}
+        {% endblock %}
+
+        {% block content %}
+            <h5>etse es el contenido </h5>
+        {% endblock %}
+
+        {% block footer %}
+            <h5>etse es el footer </h5>
+        {% endblock %}
+    </body>
+</html>
