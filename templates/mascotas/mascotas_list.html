@@ -1,0 +1,34 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Sexo</th>
+      <th scope="col">edad</th>
+      <th scope="col">fecha</th>
+      <th scope="col">Dueño</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    {% if mascotas %}
+        {% for mascota in mascotas %}
+            <tr>
+              <td>{{ mascota.id}}</td>
+              <td>{{ mascota.nombre}}</td>
+              <td>{{ mascota.sexo}}</td>
+              <td>{{ mascota.edad_aproximada}}</td>
+              <td>{{ mascota.fecha_rescate}}</td>
+              <td>{{ mascota.persona.nombre}} {{ mascota.persona.apellidos}}</td>
+            </tr>
+        {% endfor%}
+    {% else %}
+        <h1>no hay registros </h1>
+    {% endif %}
+  </tbody>
+</table>
+{% endblock %}
